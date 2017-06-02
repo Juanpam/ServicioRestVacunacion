@@ -1,7 +1,8 @@
-                        <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>thenewboston</title>
+    <title>Vacunacion</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -10,11 +11,63 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1> holiwis </h1>
-        <p>me gusta el tomate</p>
+    <!-- menu bar -->
+   <nav class="navbar navbar-inverse">
+       <div class="container-fluid">
 
-    </div>
+           <!-- Logo -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Vacunitas</a>
+        </div>
+
+        <!-- Items menu -->
+        <div class="collapsenavbar-collapse" id="mainNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Inicio</a></li>
+                    <li ><a href="#">item2</a></li>
+                    <li ><a href="#">item3</a></li>
+                </ul>
+
+                <!-- izquierda-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li ><a href="#">Cerrar Sesion</a></li>
+                </ul>
+
+        </div>
+
+           
+           
+
+       </div>
+   </nav>
+
+   <!-- contenido ö -->
+
+   <div class="container-fluid">
+       <div class="panel panel-warning">
+           <div class="panel-heading">
+               <h3 class="panel-title"><center>Inicio de sesion pacientes</center></h3>
+           </div>
+           <div class="panel-body">
+               <center>
+                    <form>  
+                        Usuario<br>
+                        <input type="text" name="user"/><br>
+                        Contraseña<br>
+                        <input type="password" name="pass"/><br><br>
+                    </form>
+                    <button type="submit" class="btn btn-warning" role="button">Iniciar Sesión</button>
+               </center>
+           </div>     
+       </div>
+
+   </div>
+   
 
 
 

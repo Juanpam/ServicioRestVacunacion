@@ -10,13 +10,13 @@ app.use(methodOverride());
 
 var router = express.Router();
 
-router.get('/', function(req, res) {  
-   res.sendFile('/home/juanpmejia/Documentos/node_api_rest/index.html');
+router.get('/', function(req, res) {
+   res.sendFile('/index.html',{ root : __dirname});
 });
 
 app.use(router);
 
 
-app.listen(3000, function() {  
-  console.log("Node server running on http://localhost:3000");
+app.listen(8080, function() {  
+  console.log("Node server running on http://localhost:8080");
 });
