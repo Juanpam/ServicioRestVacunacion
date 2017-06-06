@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+<div class="col-md-6 col-md-offset-3">
+    <h2>Consulta tu carnet</h2>
+    <form name="form">
+        <div class="form-group">
+            <label for="username">Número de Identificación</label>
+            <input type="text" name="username" id="username" class="form-control" required />
+            <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Se necesita un numero de documento</span>
+        </div>
+        <div class="form-actions">
+            <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Acceder</button>
+            <a href="#!/register" class="btn btn-link">Registro</a>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

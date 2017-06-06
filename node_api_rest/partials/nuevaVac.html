@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<div class="col-md-6 col-md-offset-3">
+    <h2>Registro de Vacuna</h2>
+    <form name="form" ng-submit="vm.register()" role="form">
+        <div class="form-group" ng-class="{ 'has-error': form.nombreVac.$dirty && form.nombreVac.$error.required }">
+            <label for="username">Nombre de la vacuna</label>
+            <input type="text" name="nombreVac" id="nombreVac" class="form-control" ng-model="vm.user.nombreVac" required />
+            <span ng-show="form.nombreVac.$dirty && form.nombreVac.$error.required" class="help-block">Nombre de la vacuna</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.Vacdosis.$dirty && form.dosis.$error.required }">
+            <label for="username">Dosis de la vacuna</label>
+            <input type="number" name="dosis" id="dosis" class="form-control" ng-model="vm.user.dosis" required />
+            <span ng-show="form.dosis.$dirty && form.dosis.$error.required" class="help-block">Dosis de la vacuna</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.fechaVac.$dirty && form.fechaVac.$error.required }">
+            <label for="username">Fecha de la vacuna</label>
+            <input type="date" name="fechaVac" id="fechaVac" class="form-control" ng-model="vm.user.fechaVac" required />
+            <span ng-show="form.fechaVac.$dirty && form.fechaVac.$error.required" class="help-block">Fecha de la vacuna</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.edadA.$dirty && form.edadA.$error.required }">
+            <label for="username">Edad en años del paciente</label>
+            <input type="number" name="edadA" id="edadA" class="form-control" ng-model="vm.user.edadA" required />
+            <span ng-show="form.edadA.$dirty && form.edadA.$error.required" class="help-block">Edad años</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.edadM.$dirty && form.edadM.$error.required }">
+            <label for="username">Edad en meses del paciente</label>
+            <input type="number" name="edadM" id="edadM" class="form-control" ng-model="vm.user.edadM" required />
+            <span ng-show="form.edadM.$dirty && form.edadM.$error.required" class="help-block">Edad meses</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.labVac.$dirty && form.labVac.$error.required }">
+            <label for="username">Laboratorio de aplicación de la vacuna</label>
+            <input type="text" name="labVac" id="labVac" class="form-control" ng-model="vm.user.labVac" required />
+            <span ng-show="form.labVac.$dirty && form.labVac.$error.required" class="help-block">Laboratorio</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.numLoteVac.$dirty && form.numLoteVac.$error.required }">
+            <label for="username">Número de lote de vacuna</label>
+            <input type="number" name="numLoteVac" id="numLoteVac" class="form-control" ng-model="vm.user.numLoteVac" required />
+            <span ng-show="form.numLoteVac.$dirty && form.numLoteVac.$error.required" class="help-block">No. de lote de vacuna</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.IPSVac.$dirty && form.IPSVac.$error.required }">
+            <label for="username">Instituto prestador de salud (IPS)</label>
+            <input type="number" name="IPSVac" id="IPSVac" class="form-control" ng-model="vm.user.IPSVac" required />
+            <span ng-show="form.IPSVac.$dirty && form.IPSVac.$error.required" class="help-block">IPS</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.fechaProxVac.$dirty && form.fechaProxVac.$error.required }">
+            <label for="username">Fecha de la próxima aplicación</label>
+            <input type="date" name="fechaProxVac" id="fechaProxVac" class="form-control" ng-model="vm.user.fechaProxVac" required />
+            <span ng-show="form.fechaProxVac.$dirty && form.fechaProxVac.$error.required" class="help-block">Fecha de la próxima vacuna</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.nomAplVac.$dirty && form.nomAplVac.$error.required }">
+            <label for="username">Nombre aplicador</label>
+            <input type="text" name="nomAplVac" id="nomAplVac" class="form-control" ng-model="vm.user.nomAplVac" required />
+            <span ng-show="form.nomAplVac.$dirty && form.nomAplVac.$error.required" class="help-block">Nombre de quien aplica la vacuna</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.cedAplVac.$dirty && form.cedAplVac.$error.required }">
+            <label for="username">Cédula aplicador</label>
+            <input type="number" name="cedAplVac" id="cedAplVac" class="form-control" ng-model="vm.user.cedAplVac" required />
+            <span ng-show="form.cedAplVac.$dirty && form.cedAplVac.$error.required" class="help-block">Cèdula de quien aplica la vacuna</span>
+        </div>
+                
+        <div class="form-actions">
+            <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Registrar vacuna</button>
+        </div> 
+    </form>
+</div>
+</html>

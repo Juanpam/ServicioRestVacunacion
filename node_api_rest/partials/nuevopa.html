@@ -1,0 +1,94 @@
+
+<html ng-app="app" ng-controller="ctrl">
+<div class="col-md-6 col-md-offset-3">
+    <h2>Registro del Paciente</h2>
+    <form name="form" ng-submit="vm.register()" role="form">
+        <div class="form-group" ng-class="{ 'has-error': form.nombre.$dirty && form.nombre.$error.required }">
+            <label for="username">Nombre</label>
+            <input type="text" name="nombre" id="nombre" class="form-control" ng-model="vm.user.nombre" required />
+            <span ng-show="form.nombre.$dirty && form.nombre.$error.required" class="help-block">Digite el nombre del paciente</span>
+        </div>
+         <div class="form-group" ng-class="{ 'has-error': form.apellido.$dirty && form.apellido.$error.required }">
+            <label for="username">Apellido</label>
+            <input type="text" name="apellido" id="apellido" class="form-control" ng-model="vm.user.apellido" required />
+            <span ng-show="form.apellido.$dirty && form.apellido.$error.required" class="help-block">Digite el apellido del paciente</span>
+        </div>
+         <div class="form-group" ng-class="{ 'has-error': form.fechaNacimiento.$dirty && form.fechaNacimiento.$error.required }">
+            <label for="username">Fecha de Nacimiento</label>
+            <input type="date" name="fechaNacimiento" id="fechaNacimiento" class="form-control" ng-model="vm.user.fechaNacimiento" required />
+            <span ng-show="form.fechaNacimiento.$dirty && form.fechaNacimiento.$error.required" class="help-block">Fecha de nacimiento del paciente</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.docu.$dirty && form.docu.$error.required }">
+            <label for="username">Número de documento</label>
+            <input type="number" name="docu" id="docu" class="form-control" ng-model="vm.user.docu" required />
+            <span ng-show="form.docu.$dirty && form.docu$error.required" class="help-block">Número de documento</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.nacimiento.$dirty && form.nacimiento.$error.required }">
+            <label for="username">Num. del certificado de nacimiento</label>
+            <input type="number" name="nacimiento" id="nacimiento" class="form-control" ng-model="vm.user.nacimiento" required />
+            <span ng-show="form.nacimiento.$dirty && form.nacimiento.$error.required" class="help-block">Número del certificado de nacimiento</span>
+        </div>
+          
+        <div>
+            <label for="username">Género</label>
+            <select ng-model="selectedGenre" ng-options="x as x for x in genres"></select>
+        </div>
+        
+        <div>
+            
+            <label for="username">Tipo de documento</label>
+            <select ng-model="selectedDocumentType" ng-options="x as x for x in documentType"></select>
+        </div>
+      
+        <script type="text/javascript" src="js/selected.js"></script>
+        
+        <div class="form-group" ng-class="{ 'has-error': form.peso.$dirty && form.peso.$error.required }">
+            <label for="username">Peso de nacimiento</label>
+            <input type="number" name="peso" id="peso" class="form-control" ng-model="vm.user.peso" required />
+            <span ng-show="form.peso.$dirty && form.peso.$error.required" class="help-block">Peso de nacimiento del paciente</span>
+        </div>
+        
+        <div class="form-group" ng-class="{ 'has-error': form.responsable.$dirty && form.responsable.$error.required }">
+            <label for="username">Nombre del responsable</label>
+            <input type="text" name="responsable" id="responsable" class="form-control" ng-model="vm.user.responsable" required />
+            <span ng-show="form.responsable.$dirty && form.responsable.$error.required" class="help-block">Digite el nombre de la persona responsable del paciente</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.responsableDir.$dirty && form.responsableDir.$error.required }">
+            <label for="username">Dirección del responsable</label>
+            <input type="text" name="responsableDir" id="responsableDir" class="form-control" ng-model="vm.user.responsableDir" required />
+            <span ng-show="form.responsableDir.$dirty && form.responsableDir.$error.required" class="help-block">Dirección de la persona responsable del paciente</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.responsableC.$dirty && form.responsableC.$error.required }">
+            <label for="username">Ciudad del responsable</label>
+            <input type="text" name="responsableC" id="responsableC" class="form-control" ng-model="vm.user.responsableC" required />
+            <span ng-show="form.responsableC.$dirty && form.responsableC.$error.required" class="help-block">Ciudad de la persona responsable del paciente</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.responsableD.$dirty && form.responsableD.$error.required }">
+            <label for="username">Departamento del responsable</label>
+            <input type="text" name="responsableD" id="responsableD" class="form-control" ng-model="vm.user.responsableD" required />
+            <span ng-show="form.responsableD.$dirty && form.responsableD.$error.required" class="help-block">Departamento de la persona responsable del paciente</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.entidad.$dirty && form.entidad.$error.required }">
+            <label for="username">Entidad responsable de la creación del carnet</label>
+            <input type="text" name="entidad" id="entidad" class="form-control" ng-model="vm.user.entidad" required />
+            <span ng-show="form.entidad.$dirty && form.entidad.$error.required" class="help-block">Nombre de entidad responsable del carnet</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.entidadPer.$dirty && form.entidadPer.$error.required }">
+            <label for="username">Nombre persona responsable de la creación del carnet</label>
+            <input type="text" name="entidadPer" id="entidadPer" class="form-control" ng-model="vm.user.entidadPer" required />
+            <span ng-show="form.entidadPer.$dirty && form.entidadPer.$error.required" class="help-block">Nombre de Persona responsable de la creación del carnet</span>
+        </div>
+         <div class="form-group" ng-class="{ 'has-error': form.entidadPerD.$dirty && form.entidadPerD.$error.required }">
+            <label for="username">Documento de la persona responsable de la creación del carnet</label>
+            <input type="number" name="entidadPerD" id="entidadPerD" class="form-control" ng-model="vm.user.entidadPerD" required />
+            <span ng-show="form.entidadPerD.$dirty && form.entidadPerD.$error.required" class="help-block">Número de documento de Persona responsable de la creación del carnet</span>
+        </div>
+        
+        <div class="form-actions">
+            <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Registrar paciente</button>
+        </div>
+        
+    </form>
+    
+</div>
+</html>

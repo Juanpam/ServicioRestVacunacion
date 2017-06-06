@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+        <div class="col-md-6 col-md-offset-3">
+            <h2>Registro del Paciente</h2>
+            <form name="form" ng-submit="vm.register()" role="form">
+               
+                <div class="form-group" ng-class="{ 'has-error': form.entidadPer.$dirty && form.entidadPer.$error.required }">
+                    <label for="username">Nombre de la persona perteneciente a la entidad</label>
+                    <input type="text" name="entidadPer" id="entidadPer" class="form-control" ng-model="vm.user.entidadPer" required />
+                    <span ng-show="form.entidadPer.$dirty && form.entidadPer.$error.required" class="help-block">Nombre de Persona perteneciente a la entidad</span>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': form.entidadPerD.$dirty && form.entidadPerD.$error.required }">
+                    <label for="username">Documento de la persona perteneciente a la entidad</label>
+                    <input type="number" name="entidadPerD" id="entidadPerD" class="form-control" ng-model="vm.user.entidadPerD" required />
+                    <span ng-show="form.entidadPerD.$dirty && form.entidadPerD.$error.required" class="help-block">Número de documento de Persona perteneciente a la entidad</span>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': form.entidadPerA.$dirty && form.entidadPerA.$error.required }">
+                    <label for="username">Apellido de la persona perteneciente a la entidad</label>
+                    <input type="text" name="entidadPerA" id="entidadPerA" class="form-control" ng-model="vm.user.entidadPerA" required />
+                    <span ng-show="form.entidadPerA.$dirty && form.entidadPerA.$error.required" class="help-block">Apellido de Persona perteneciente a la entidad</span>
+                    
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': form.entidad.$dirty && form.entidad.$error.required }">
+                    <label for="username">Nombre de la entidad a la que pertenece</label>
+                    <input type="text" name="entidad" id="entidad" class="form-control" ng-model="vm.user.entidad" required />
+                    <span ng-show="form.entidad.$dirty && form.entidad.$error.required" class="help-block">Nombre de la entidad</span>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': form.correo.$dirty && form.correo.$error.required }">
+                    <label for="username">Correo electrónico</label>
+                    <input type="text" name="correo" id="correo" class="form-control" ng-model="vm.user.correo" required />
+                    <span ng-show="form.correo.$dirty && form.correo.$error.required" class="help-block">Ingrese correo electrónico</span>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': form.contrasena.$dirty && form.contrasena.$error.required }">
+                    <label for="username">Contraseña</label>
+                    <input type="text" name="contrasena" id="contrasena" class="form-control" ng-model="vm.user.contrasena" required />
+                    <span ng-show="form.contrasena.$dirty && form.contrasena.$error.required" class="help-block">Ingrese contraseña</span>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Registrar</button>
+                </div>
+            </form>
+        </div>
+</html>
